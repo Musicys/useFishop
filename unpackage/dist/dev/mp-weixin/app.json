@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#0C1214",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "spacing": "8px",
+    "backgroundColor": "#FFFFFF",
+    "color": "#ADB1B6",
+    "selectedColor": "#4A86F2",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/SYONE.png",
+        "selectedIconPath": "static/SY.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/WDONE.png",
+        "selectedIconPath": "/static/WD.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
