@@ -23,4 +23,8 @@
 	-webkit-appearance: none;
 	background: transparent;
 }
+page{
+	font-size: 32rpx;
+}
+
 

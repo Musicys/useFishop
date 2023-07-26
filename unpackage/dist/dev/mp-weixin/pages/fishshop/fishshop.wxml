@@ -1,0 +1,1 @@
+<view class="fishshop"><cart vue-id="1ef43b80-1" fishshop="{{true}}" bind:__l="__l"></cart><view class="center"><text>一池塘(3小时)</text><text>48</text></view><view class="fkshop"><view class="left">￥360（240+ 100 押金）</view><view data-event-opts="{{[['tap',[['goapi',['$event']]]]]}}" class="right" bindtap="__e">支付</view></view></view>

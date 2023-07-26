@@ -27,21 +27,20 @@
 .index {
   width: 750rpx;
   height: 100vh;
-  background: gray;
   position: relative;
 }
 /* /index_top */
 .index_top {
   height: 40%;
   width: 750rpx;
-  background: green;
+  background: #FFFFFF;
   position: relative;
 }
 .index_top image {
   width: 100%;
   height: 110%;
   position: absolute;
-  top: -120rpx;
+  top: -150rpx;
   z-index: 0;
 }
 .index_top .top_bt {
@@ -67,7 +66,6 @@
 .index_but .scrollview {
   width: 100%;
   height: 100%;
-  background: green;
 }
 .index_but .scrollview .top {
   width: 100%;
@@ -90,6 +88,7 @@
   width: 300rpx;
   height: 300rpx;
   margin-right: 20rpx;
+  position: relative;
 }
 .index_but .scrollview .top .up_top .buttonone text:nth-child(1) {
   margin-top: 30rpx;
@@ -160,7 +159,19 @@
 }
 .index_but .scrollview .but {
   width: 100%;
-  background: dimgray;
-  min-height: 100%;
+  background: #F7F7F7;
+  height: 100%;
+}
+.index_but .scrollview .but .bt {
+  display: block;
+  margin-left: 8%;
+  color: #1B232E;
+  padding-top: 2%;
+  font-weight: bold;
+  height: 8%;
+}
+.index_but .scrollview .but .fishCart {
+  height: 90%;
+  width: 750rpx;
 }
 

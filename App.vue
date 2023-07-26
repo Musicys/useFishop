@@ -23,4 +23,8 @@
 		-webkit-appearance: none;
 		background: transparent;
 	}
+	html{
+		font-size: 32rpx;
+	}
+
 </style>

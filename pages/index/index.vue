@@ -1,7 +1,7 @@
 <template>
 	<view class="index">
 	<view class="index_top">
-		<image src="../../static/usefish.png" ></image>
+		<image src="../../static/usefish.png" mode="scaleToFill"></image>
 		<view class="top_bt">
 			<text>冠军垂钓俱乐部</text>
 			<text>副标题</text>
@@ -14,7 +14,9 @@
 				
 				<view class="up_top">
 						<!-- 按钮一 -->
-					<view class="buttonone" @click="goshop"><text>当日票</text>
+					<view class="buttonone" @click="goshop">
+					
+						<text>当日票</text>
 					<text>去购买</text></view>
 					
 					<view class="up_top_right">
@@ -36,7 +38,17 @@
 			</view>
 			
 			<view class="but"  id="to2">
-				
+				<text class="bt">
+					塘口信息
+				</text>
+					
+				<scroll-view scroll-y="true"  class="fishCart">
+					
+						<Cart ></Cart>
+
+						
+						<Cart></Cart>
+				</scroll-view>
 			</view>
 		</scroll-view>
 	</view>
@@ -49,12 +61,15 @@
 		data() {
 			return {
 			
-				usey:1	// 控制滚动到购买页面
-				
+				usey:1,	// 控制滚动到购买页面
+				usetab:false,//是否使用导航
 			}
 		},
+		components:{
+			Cart
+		},
 		onLoad() {
-
+			
 		},
 		methods: {
 			goshop(){
@@ -63,6 +78,9 @@
 					this.usey=0
 				})
 			}
+		},
+		onLaunch(){
+			wx.login()
 		}
 	}
 </script>
@@ -72,7 +90,7 @@
 		
 		width: 750rpx;
 		height: 100vh;
-		background: gray;
+		
 		position: relative;
 	}
 	
@@ -81,17 +99,18 @@
 	.index_top{
 			height: 40%;
 			width: 750rpx;
-			background: green;
+			background:#FFFFFF;
 			position: relative;
 			image{
 					width: 100%;
 					height: 110%;
 					position: absolute;
-					top: -120rpx;
+					top: -150rpx;
 					z-index: 0;
 					
 				}
 			.top_bt{
+				
 				z-index: 2;
 				top: 30%;
 				position: absolute;
@@ -119,9 +138,10 @@
 		border-radius: 25rpx 25rpx 0rpx 0rpx;
 		overflow: hidden;
 		.scrollview{
+			
 			width: 100%;
 			height: 100%;
-			background: green;
+			
 			.top{
 				width: 100%;
 				background: ghostwhite;
@@ -147,6 +167,8 @@
 						width: 300rpx;
 						height: 300rpx;
 						margin-right: 20rpx;
+						position: relative;
+					
 						text:nth-child(1)
 						{
 							margin-top: 30rpx;
@@ -237,8 +259,21 @@
 		
 			.but{
 				width: 100%;
-				background: dimgray;
-				min-height: 100%;
+				background: #F7F7F7;
+				height: 100%;
+				.bt{
+					display: block;
+					margin-left: 8%;	
+					color: #1B232E;
+					padding-top: 2%;
+					font-weight: bold;
+					height: 8%;
+				}
+				.fishCart{
+					height: 90%;
+					width: 750rpx;
+					
+				}
 			}
 		}
 	}

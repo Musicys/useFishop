@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/fishshop/fishshop"
   ],
   "subPackages": [],
   "window": {
