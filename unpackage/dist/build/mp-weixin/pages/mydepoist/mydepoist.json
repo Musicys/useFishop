@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "订单",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "iszore": "/components/iszore",
+    "cartpoist": "/components/Cartpoist"
+  }
+}

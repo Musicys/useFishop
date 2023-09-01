@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的押金",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "iszore": "/components/iszore",
+    "cartprice": "/components/Cartprcie"
+  }
+}

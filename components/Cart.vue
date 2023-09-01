@@ -5,32 +5,43 @@
 	<view class="Cart">
 		<view class="top">
 			<view class="left">
-				<image src="https://tse2-mm.cn.bing.net/th/id/OIP-C.Xhg3AagkYbO8MNcE5FK5xQHaD0?pid=ImgDet&rs=1" mode="aspectFill"></image>
+				<image :src="'https://'+usedata.pool_image_url" mode="aspectFill"></image>
 				<view class="left_text">
-					正钓 7 月 2 日
+					塘口信息
 				</view>
 			</view>
 			 <view class="right">
 			
-			<view class="right_bt">  <image src="/static/shayu.png" mode=""></image>一号额鱼塘</view>
-			 	<view class="right_cl">7月1日放什么鱼1000今</view >
+			<view class="right_bt">  <image src="/static/shayu.png" mode=""></image>{{usedata.pool_name}}</view>
+			 	<view class="right_cl">{{usedata.description}}</view >
 			 	<view class="jg">
 						<!-- <image src="/static/hg.png" mode="" ></image> -->
-			 		<view class="jg_hy"> <image src="../static/hg.png" mode=""></image>会员价格25/斤</view><text>散客20/斤</text>
+			 		<view class="jg_hy"> <image src="../static/hg.png" mode=""></image>会员价格{{usedata.vip_repuchase}}/斤</view><text>散客{{usedata.repuchase}}/斤</text>
 			 	</view>
 			 </view> 
 		</view> 
 		<view class="but" v-if="!fishshop">
 			<view class="but_left">
-				<view class="lets">￥240
-				<view class="yaj">+100押金</view>
-				<view class="time">（四小时）</view>
+				<view class="lets">￥{{usedata.price_desc}}
+				<view class="yaj">+{{usedata.pledge_desc}}押金</view>
+				<view class="time">（{{usedata.duration_desc}}）</view>
 				</view>
 				
 			</view>
 			<view class="but_right" @click="navgoshop" >
 				购票+押金
 			</view>
+			
+		</view>
+		<view class="but" v-else>
+			<view class="but_left">
+				<view class="lets">￥{{usedata.price_desc}}
+				<view class="yaj">+{{usedata.pledge_desc}}押金</view>
+				<view class="time">（{{usedata.duration_desc}}）</view>
+				</view>
+				
+			</view>
+	
 		</view>
 		</view>
 	</view>
@@ -44,6 +55,22 @@
 	export default {
 		name:"Cart",
 		props:{
+			data:{
+				default(){
+					return {				
+						"id": 1,//鱼塘id
+						"pool_image_url":'https://tse2-mm.cn.bing.net/th/id/OIP-C.Xhg3AagkYbO8MNcE5FK5xQHaD0?pid=ImgDet&rs=1',//鱼塘图片
+						"pool_name":'一号额鱼塘',//鱼塘名字
+						"enable_time_desc":'正钓 7 月 2 日',//真钓时间
+						"pool_description":'7月1日放什么鱼1000今',//放货时间	
+						"vip_repuchase":25,//会员价格
+						"repuchase":15,//普通价格
+						"price_desc":240,//套餐价格
+						"pledge_desc":100,//押金
+						"duration_desc":'四小时'//时长
+					}
+				}	
+			},
 			fishshop:{
 				default(){
 					return false
@@ -53,16 +80,77 @@
 		,
 		data() {
 			return {
-				id:1
+				
+				usedata:{}
 			};
 		},
 		methods:{
 			navgoshop(){
 				
-				uni.navigateTo({
-					url:"/pages/fishshop/fishshop?id="+this.id,
-				})
+				
+				
+				
+				if(wx.getStorageSync('user'))
+				{
+					
+					if(getApp().isshopfish)
+					{
+						getApp().useshopfish=this.usedata
+					
+						uni.navigateTo({
+							url:"/pages/fishshop/fishshop",
+							
+						})
+					}
+					else
+					{
+						
+						wx.showModal({
+						  title: '提示',
+						  content: '是否重复购买',
+						  success :res=> {
+						    if (res.confirm) {
+						    getApp().useshopfish=this.usedata
+						
+						    uni.navigateTo({
+						    	url:"/pages/fishshop/fishshop",
+						    	
+						    })
+						    } else if (res.cancel) {
+						     
+							 
+							 
+						    }
+						  }
+						})
+						
+						
+							
+							
+							
+					}
+				
+				}
+				else{
+					
+					
+					
+					wx.switchTab({
+						url:"/pages/my/my",
+						success:res=>{
+							uni.showToast({	title: '请先登录',icon:'none',duration: 1000})
+						}
+					})
+				}
+				
 			}
+		},
+		beforeMount(){
+	
+		this.usedata=this.data
+	
+	
+		
 		}
 	}
 </script>
@@ -70,6 +158,7 @@
 <style lang="scss" scoped>
 	
 .Cart{
+	
 	width:620rpx;
 	height: 350rpx;
 	border-radius: 25rpx;

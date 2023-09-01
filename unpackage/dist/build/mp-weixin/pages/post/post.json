@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单详细",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "cartxx": "/components/Cartxx"
+  }
+}

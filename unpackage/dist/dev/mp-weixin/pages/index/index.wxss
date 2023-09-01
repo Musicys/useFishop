@@ -121,20 +121,21 @@
   align-items: center;
   font-weight: bold;
 }
+.index_but .scrollview .top .up_top .up_top_right .buttontwo text {
+  font-size: .8em;
+}
 .index_but .scrollview .top .up_top .up_top_right .buttonthree {
   border-top: 10rpx;
   flex: 1;
-  background: #F2EBEB;
   margin-top: 2rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #A3AAB5;
   font-weight: bold;
 }
-.index_but .scrollview .top .up_top .up_top_right .buttonthree text:nth-child(2) {
-  font-size: 25rpx;
+.index_but .scrollview .top .up_top .up_top_right .buttonthree text {
+  font-size: .8em;
 }
 .index_but .scrollview .top .up_but {
   display: flex;
@@ -145,7 +146,7 @@
   justify-content: space-between;
 }
 .index_but .scrollview .top .up_but view {
-  width: 50%;
+  width: 100%;
   text-align: center;
   height: 75rpx;
   border-radius: 20rpx;
@@ -160,7 +161,6 @@
 .index_but .scrollview .but {
   width: 100%;
   background: #F7F7F7;
-  height: 100%;
 }
 .index_but .scrollview .but .bt {
   display: block;
@@ -173,5 +173,272 @@
 .index_but .scrollview .but .fishCart {
   height: 90%;
   width: 750rpx;
+}
+.nr {
+  height: 100vh;
+  width: 750rpx;
+}
+.nr .swiper-item {
+  height: 100%;
+  width: 750rpx;
+}
+.js .js_top {
+  background: #6495ED;
+  width: 750rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.js .js_top text {
+  font-size: 1em;
+  display: block;
+  margin-top: 1em;
+  color: #FFFFFF;
+}
+.js .js_top .jt {
+  left: 1em;
+  position: absolute;
+  top: 2.5em;
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 4rpx solid #FFFFFF;
+  border-left: 4rpx solid #FFFFFF;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.js .tsxx {
+  font-size: .9em;
+  height: 80rpx;
+  width: 750rpx;
+  background: #FEEEDF;
+  color: #FA9131;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.js .tsxx image {
+  display: block;
+  margin-right: 1em;
+  margin-left: 1em;
+  height: 50rpx;
+  width: 50rpx;
+}
+.js .js_cnter {
+  width: 580rpx;
+  height: 200rpx;
+  border-radius: 25rpx;
+  background: #6495ED;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.js .js_cnter view {
+  margin-left: 1em;
+  flex: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #D5DEFB;
+  font-size: 1.2em;
+}
+.js .js_cnter view text {
+  display: inline-block;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin: auto;
+}
+.js .user {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 150rpx;
+  background: black;
+  opacity: .5;
+  z-index: 5;
+}
+.js .useindex {
+  width: 750rpx;
+  height: 40%;
+  background: #E7EBFB;
+  border-radius: 15rpx 15rpx 0 0;
+  z-index: 6;
+  bottom: 0;
+  color: #6495ED;
+  position: absolute;
+  overflow: hidden;
+}
+.js .useindex .scrolltwo {
+  padding-top: 10rpx;
+  width: 100%;
+  height: 80%;
+}
+.js .useindex .scrolltwo .bt {
+  width: 100%;
+  height: 60rpx;
+  font-size: 1em;
+  text-align: center;
+}
+.js .useindex .scrolltwo .use {
+  color: #FFFFFF;
+  font-size: 1em;
+  border-bottom: 1rpx solid #CCCccc;
+  width: 750rpx;
+  background: #6495ED;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.js .useindex .scrolltwo .use image {
+  width: 50rpx;
+  height: 80%;
+}
+.js .useindex button {
+  background: #E7EBFB;
+  color: #6495ED;
+}
+.js .js_clock {
+  width: 620rpx;
+  height: 400rpx;
+  margin: 50rpx auto;
+  overflow: hidden;
+  position: relative;
+}
+.js .js_clock .js_yuan {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: 400rpx;
+  border-radius: 50%;
+  height: 400rpx;
+  bottom: -2em;
+  overflow: hidden;
+  background: linear-gradient(180deg, #6495ED, #E7EBFB);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.js .js_clock .js_yuan .js_cd {
+  width: 100rpx;
+  height: 450rpx;
+  bottom: 50%;
+  overflow: hidden;
+  border-radius: 30rpx;
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
+  background: linear-gradient(180deg, #ECF0FB, #BBC3FE);
+  position: absolute;
+  z-index: 1;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+.js .js_clock .js_yuan .js_zd {
+  left: 50%;
+  z-index: 3;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: 85%;
+  border-radius: 50%;
+  height: 85%;
+  overflow: hidden;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.js .js_clock .js_yuan .js_zd view {
+  width: 80%;
+  height: 50rpx;
+  text-align: center;
+  margin-top: .2em;
+}
+.js .js_clock .js_yuan .js_zd > view:nth-child(1) {
+  margin-top: 1.4em;
+  font-size: 1.2em;
+}
+.js .js_clock .js_yuan .js_zd > view:nth-child(2) {
+  color: #6495ED;
+  font-weight: bold;
+  font-size: 2em;
+}
+.js .js_clock .js_yuan .js_zd > view:nth-child(3) {
+  margin-top: 1.9em;
+  font-size: .8em;
+}
+.js .btnfor {
+  width: 700rpx;
+  margin: 50rpx auto;
+  height: 250rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.js .btnfor button {
+  width: 40%;
+  height: 40%;
+  border: .1rpx solid #F3F2FA;
+  background: none;
+  color: #484848;
+  font-size: 1.1em;
+}
+.js .btnfor .end {
+  background: #FE5A37;
+  color: #FFFFFF;
+}
+.ys {
+  background: #FE5A37;
+  color: #FFFFFF;
+}
+.ys1 {
+  background: #F2EBEB;
+  color: #A3AAB5;
+}
+@-webkit-keyframes rotate {
+from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+}
+@keyframes rotate {
+from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+}
+.opacity {
+  opacity: .6;
+}
+.fade-to {
+  -webkit-animation: fade-to 0.5s;
+          animation: fade-to 0.5s;
+}
+@-webkit-keyframes fade-to {
+from {
+    height: 0;
+}
+to {
+    height: 40%;
+}
+}
+@keyframes fade-to {
+from {
+    height: 0;
+}
+to {
+    height: 40%;
+}
 }
 

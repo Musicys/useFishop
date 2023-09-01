@@ -1,0 +1,1 @@
+<view class="tis"><view><image src="{{url}}" mode="heightFix"></image><text>{{title}}</text></view></view>

@@ -105,9 +105,7 @@ var _default = {
   onShow: function onShow() {
     console.log('App Show');
   },
-  onHide: function onHide() {
-    console.log('App Hide');
-  }
+  onHide: function onHide() {}
 };
 exports.default = _default;
 

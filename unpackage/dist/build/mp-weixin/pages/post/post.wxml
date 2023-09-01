@@ -1,0 +1,1 @@
+<view hidden="{{!(isFx)}}"><block wx:if="{{isuse}}"><cartxx vue-id="0d4588c0-1" index="{{useindex}}" use="{{true}}" bind:__l="__l"></cartxx></block></view>

@@ -1,0 +1,1 @@
+.tis{width:750rpx;height:80vh;display:flex;justify-content:center;align-items:center}.tis view{display:flex;justify-content:center;flex-direction:column;align-items:center}.tis view image{width:250rpx;height:200rpx}.tis view text{display:block;color:#6495ed;font-size:1.2em;font-weight:700;margin-top:.5em}

@@ -7,8 +7,8 @@
   "setting": {
     "urlCheck": false,
     "es6": false,
-    "postcss": false,
-    "minified": false,
+    "postcss": true,
+    "minified": true,
     "newFeature": true,
     "bigPackageSizeSupport": true,
     "babelSetting": {
@@ -16,11 +16,11 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "condition": false
+    "condition": true
   },
   "compileType": "miniprogram",
-  "libVersion": "3.0.0",
-  "appid": "touristappid",
+  "libVersion": "",
+  "appid": "wx406e8d19fbc32bab",
   "projectname": "un",
   "condition": {},
   "editorSetting": {

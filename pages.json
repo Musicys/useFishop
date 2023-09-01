@@ -28,9 +28,13 @@
             "style" :                                                                                    
             {
                
-                "enablePullDownRefresh": false,
-	
-				"navigationStyle":"custom"
+          "enablePullDownRefresh": false,
+			"navigationBarTitleText": "我的",
+			"enablePullDownRefresh": false,
+			"navigationBarBackgroundColor": "#6495ED"
+			
+			
+					
             }
             
         }
@@ -40,10 +44,66 @@
             {
                 "navigationBarTitleText": "生成订单/支付",
                 "enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#7B8CFE"
+				"navigationBarBackgroundColor": "#6495ED"
 				
 				
 				
+            }
+            
+        }
+        ,{
+            "path" : "pages/myorders/myorders",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的押金",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mydepoist/mydepoist",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/wallet/wallet",
+            "style" :                                                                                    
+            {
+                
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/post/post",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单详细",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+       
+        ,{
+            "path" : "pages/walletlist/walletlist",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "消费记录",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		
+        ,{
+            "path" : "pages/usepost/usepost",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单详细",
+                "enablePullDownRefresh": false
             }
             
         }
@@ -52,7 +112,7 @@
 		
 		"navigationBarTextStyle":"white",
 		
-		"navigationBarBackgroundColor": "#0C1214",
+		"navigationBarBackgroundColor": "#6495ED",
 		
 		"backgroundColor": "#F8F8F8"
 	},
@@ -69,6 +129,11 @@
 				"iconPath": "static/SYONE.png",
 				"selectedIconPath": "static/SY.png"
 			},
+			{"pagePath": "pages/wallet/wallet",
+				"text": "会员",
+				"iconPath": "/static/isvips.png",
+				"selectedIconPath": "/static/isvip.png"
+			},
 			{"pagePath": "pages/my/my",
 			"text": "我的",
 			"iconPath": "static/WDONE.png",
@@ -78,5 +143,6 @@
 			
 		]
 	}
+	
 	
 }
